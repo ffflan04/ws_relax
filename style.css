@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Poppins:ital,wght@1,800&family=Ubuntu:ital,wght@1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
+    /*font-family: 'Ubuntu', sans-serif;*/
+}
+
+.header { /* 画面上部のヘッダーを作るために、cssを当てます。*/
+    width: 100%;
+    height: 100vh;
+    background-image: url('./img/bg.jpg');
+    background-position: center; /* 設置した背景画像の中心部で合わせたい時に使う */
+    background-size: cover; /* 設置した背景画像を、背景にピッタリはめる時に使う */
+}
+nav {
+    width: 100%; /* width 100% とは、一つ上の親要素を基準とした100% です。*/
+    padding: 20px 0;
+    text-align: center; /* なんか、親要素に指定したtext-align: centerは、子要素にも適用されるらしい。*/
+    position: fixed; /* position fixed で、その場に固定できる。スクロールしても変わらない。 */
+    transition: 0.5s;
+}
+.logo {
+    width: auto; /* なんで、横幅を小さくしたのか？背景を設定するから？ */
+    margin-bottom: 20px;
+    cursor: pointer;
+    font-size: 3rem;
+    /*font-weight: 550; /* 文字の太さ。初期値は400 */
+}
+nav ul {
+    background-color: black;
+    transform: 0.5s;
+}
+nav ul li {
+    display: inline-block; /* 縦並びになるブロック要素を、インライン要素にして横並びにします。*/
+    list-style: none;
+    margin: 20px 30px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+nav ul li a:hover {
+    color: aqua;
+}
+
+.text {
+    padding: 20px 10%;
+}
+
+nav.sticky { /* 複数個クラスがついているものを指定する際は、ドットを挟んで指定する。*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.sub-logo {
+    width: auto; /* なんで、横幅を小さくしたのか？背景を設定するから？ */
+    position: absolute;
+    left: 10%;
+    cursor: pointer;
+    font-size: 2rem;
+}
+nav.sticky ul {
+    background-color: transparent;
+}
